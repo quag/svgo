@@ -3,8 +3,10 @@
 package main
 
 import (
-	"./svg"
+	svglib "./svg"
 )
+
+var svg = svglib.New(os.Stdout)
 
 const textsize = 15
 const coordsize = 4

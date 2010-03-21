@@ -3,13 +3,16 @@
 package main
 
 import (
-  "./svg"
+  svglib "./svg"
   "time"
   "rand"
   "math"
   "fmt"
   "flag"
+  "os"
 )
+
+var svg = svglib.New(os.Stdout)
 
 var niter = flag.Int("n", 200, "number of iterations")
 var width = flag.Int("w", 500, "width")

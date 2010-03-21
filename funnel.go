@@ -1,5 +1,11 @@
 package main
-import  "./svg"
+
+import (
+	svglib "./svg"
+	"os"
+)
+
+var svg = svglib.New(os.Stdout)
 
 var width  = 320
 var height = 480

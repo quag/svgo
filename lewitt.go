@@ -11,12 +11,14 @@
 package main
 
 import (
-	"./svg"
+	svglib "./svg"
 	"rand"
 	"time"
 	"fmt"
 	"flag"
 )
+
+var svg = svglib.New(os.Stdout)
 
 const tilestyle=`stroke-width:1; stroke:rgb(128,128,128); stroke-opacity:0.5; fill:white`
 const penstyle=`stroke:rgb%s; fill:none; stroke-opacity:%.2f; stroke-width:%d`
@@ -27,7 +29,6 @@ var height = 720
 var nlines = flag.Int("n", 20, "number of lines/square")
 var nw = flag.Int("w", 3, "maximum pencil width")
 var pencils = []string{"(250, 13, 44)", "(247, 212, 70)", "(52, 114, 245)"}
-
 
 func background(v int) { svg.Rect(0, 0, width, height, svg.RGB(v, v, v)) }
 
