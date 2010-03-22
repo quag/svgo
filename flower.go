@@ -3,13 +3,13 @@
 package main
 
 import (
-  svglib "./svg"
-  "time"
-  "rand"
-  "math"
-  "fmt"
-  "flag"
-  "os"
+	svglib "./svg"
+	"time"
+	"rand"
+	"math"
+	"fmt"
+	"flag"
+	"os"
 )
 
 var svg = svglib.New(os.Stdout)
@@ -39,7 +39,7 @@ func random(howsmall, howbig int) int {
 }
 
 func randrad(w int, h int, n int) {
-  var x, y, r, g, b, o, s, t, p int
+	var x, y, r, g, b, o, s, t, p int
 	for i := 0; i < n; i++ {
 		x = rand.Intn(w)
 		y = rand.Intn(h)
